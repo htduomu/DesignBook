@@ -23,9 +23,26 @@ public class TwelveDays
 		System.out.println(poem());
 	}
 	
+	
 	static String[] DAYS = {"first", "second", "third", "fourth",
 							"fifth", "sixth", "seventh", "eighth",
 							"ninth", "tenth", "eleventh", "twelfth"};
+	
+	static String[] DAYS_DIGITS = {"1st", "2nd", "3rd", "4th",
+			"5th", "6th", "7th", "8th",
+			"9th", "10th", "11th", "12th"};
+	
+	static String day(int day)
+	{
+		if(asDigits)
+		{
+			return DAYS_DIGITS[day];
+		}
+		else
+		{
+			return DAYS[day];
+		}
+	}
 	
 	static String[] GIFTS = {
 			"a partridge in a pear tree",
